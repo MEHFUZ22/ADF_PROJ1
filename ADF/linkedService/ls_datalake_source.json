@@ -1,0 +1,22 @@
+{
+	"name": "ls_datalake_source",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://devdatalakesource.dfs.core.windows.net/",
+			"tenant": "e8c20aad-e2cd-4c57-9c87-8f4265fab6d9",
+			"servicePrincipalId": "ec07031d-2370-4e52-aeea-77abc4a79ade",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "dev_key_vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "spn-client-secret"
+			}
+		}
+	}
+}
