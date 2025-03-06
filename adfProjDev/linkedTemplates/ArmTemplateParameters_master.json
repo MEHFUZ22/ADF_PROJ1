@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfProjDev"
+		},
+		"dev_key_vault_properties_typeProperties_baseUrl": {
+			"value": "https://devkeyvaultnew.vault.azure.net/"
+		},
+		"ls_datalake_sink_properties_typeProperties_url": {
+			"value": "https://devdatalakesink.dfs.core.windows.net/"
+		},
+		"ls_datalake_sink_properties_typeProperties_tenant": {
+			"value": "e8c20aad-e2cd-4c57-9c87-8f4265fab6d9"
+		},
+		"ls_datalake_sink_properties_typeProperties_servicePrincipalId": {
+			"value": "ec07031d-2370-4e52-aeea-77abc4a79ade"
+		},
+		"ls_datalake_source_properties_typeProperties_url": {
+			"value": "https://devdatalakesource.dfs.core.windows.net/"
+		},
+		"ls_datalake_source_properties_typeProperties_tenant": {
+			"value": "e8c20aad-e2cd-4c57-9c87-8f4265fab6d9"
+		},
+		"ls_datalake_source_properties_typeProperties_servicePrincipalId": {
+			"value": "ec07031d-2370-4e52-aeea-77abc4a79ade"
+		},
+		"ls_rest_api_properties_typeProperties_url": {
+			"value": "https://api.aviationstack.com/v1/airlines"
+		},
+		"ls_source_database_properties_typeProperties_server": {
+			"value": "devdatabaseservernew.database.windows.net"
+		},
+		"ls_source_database_properties_typeProperties_database": {
+			"value": "devdatabasesource"
+		},
+		"ls_source_database_properties_typeProperties_userName": {
+			"value": "dev_database"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

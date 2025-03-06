@@ -1,0 +1,119 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfProjDev"
+		},
+		"dev_key_vault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://devkeyvaultnew.vault.azure.net/"
+		},
+		"ls_datalake_sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://devdatalakesink.dfs.core.windows.net/"
+		},
+		"ls_datalake_sink_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "e8c20aad-e2cd-4c57-9c87-8f4265fab6d9"
+		},
+		"ls_datalake_sink_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "ec07031d-2370-4e52-aeea-77abc4a79ade"
+		},
+		"ls_datalake_source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://devdatalakesource.dfs.core.windows.net/"
+		},
+		"ls_datalake_source_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "e8c20aad-e2cd-4c57-9c87-8f4265fab6d9"
+		},
+		"ls_datalake_source_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "ec07031d-2370-4e52-aeea-77abc4a79ade"
+		},
+		"ls_rest_api_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.aviationstack.com/v1/airlines"
+		},
+		"ls_source_database_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "devdatabaseservernew.database.windows.net"
+		},
+		"ls_source_database_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "devdatabasesource"
+		},
+		"ls_source_database_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "dev_database"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfProjDev_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"dev_key_vault_properties_typeProperties_baseUrl": {
+						"value": "[parameters('dev_key_vault_properties_typeProperties_baseUrl')]"
+					},
+					"ls_rest_api_properties_typeProperties_url": {
+						"value": "[parameters('ls_rest_api_properties_typeProperties_url')]"
+					},
+					"ls_datalake_sink_properties_typeProperties_url": {
+						"value": "[parameters('ls_datalake_sink_properties_typeProperties_url')]"
+					},
+					"ls_datalake_sink_properties_typeProperties_tenant": {
+						"value": "[parameters('ls_datalake_sink_properties_typeProperties_tenant')]"
+					},
+					"ls_datalake_sink_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('ls_datalake_sink_properties_typeProperties_servicePrincipalId')]"
+					},
+					"ls_datalake_source_properties_typeProperties_url": {
+						"value": "[parameters('ls_datalake_source_properties_typeProperties_url')]"
+					},
+					"ls_datalake_source_properties_typeProperties_tenant": {
+						"value": "[parameters('ls_datalake_source_properties_typeProperties_tenant')]"
+					},
+					"ls_datalake_source_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('ls_datalake_source_properties_typeProperties_servicePrincipalId')]"
+					},
+					"ls_source_database_properties_typeProperties_server": {
+						"value": "[parameters('ls_source_database_properties_typeProperties_server')]"
+					},
+					"ls_source_database_properties_typeProperties_database": {
+						"value": "[parameters('ls_source_database_properties_typeProperties_database')]"
+					},
+					"ls_source_database_properties_typeProperties_userName": {
+						"value": "[parameters('ls_source_database_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
