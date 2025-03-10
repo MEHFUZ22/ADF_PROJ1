@@ -1,0 +1,23 @@
+{
+	"name": "ls_database_sink",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "devdatabaseservernew.database.windows.net",
+			"database": "devdatabase ",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "dev_database",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "dev_key_vault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "devsource-database-pwd"
+			}
+		}
+	}
+}
