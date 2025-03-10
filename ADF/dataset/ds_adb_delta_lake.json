@@ -8,7 +8,7 @@
 		"annotations": [],
 		"type": "AzureDatabricksDeltaLakeDataset",
 		"typeProperties": {
-			"database": "hive_metastore.mart_azure",
+			"database": "mart_azure",
 			"table": "dim_airlines"
 		},
 		"schema": []
