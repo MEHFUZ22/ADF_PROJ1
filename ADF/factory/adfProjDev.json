@@ -1,13 +1,5 @@
 {
 	"name": "adfProjDev",
-	"properties": {
-		"globalParameters": {
-			"ADB": {
-				"type": "string",
-				"value": "https://adb-1234532230713889.9.azuredatabricks.net/"
-			}
-		}
-	},
 	"location": "centralindia",
 	"identity": {
 		"type": "SystemAssigned",
