@@ -1,0 +1,16 @@
+{
+	"name": "ds_adb_delta_lake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adb_delta_lake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "hive_metastore.mart_azure",
+			"table": "dim_airlines"
+		},
+		"schema": []
+	}
+}
