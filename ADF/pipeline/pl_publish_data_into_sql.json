@@ -17,7 +17,6 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureDatabricksDeltaLakeSource",
-						"query": "select * from hive_metastore.mart_azure.airlines",
 						"exportSettings": {
 							"type": "AzureDatabricksDeltaLakeExportCommand"
 						}
@@ -50,6 +49,41 @@
 							},
 							"path": "manualfiles"
 						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "iata_code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "iata_code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "icao_code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "icao_code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "name",
+									"type": "String"
+								}
+							}
+						]
 					}
 				},
 				"inputs": [
@@ -61,19 +95,11 @@
 				"outputs": [
 					{
 						"referenceName": "ds_database_sink",
-						"type": "DatasetReference",
-						"parameters": {
-							"table": "airport"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
 		],
-		"parameters": {
-			"file": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
