@@ -33,7 +33,8 @@
 						"linkedServiceName": {
 							"referenceName": "ls_datalake_sink",
 							"type": "LinkedServiceReference"
-						}
+						},
+						"path": "manualfiles"
 					},
 					"logSettings": {
 						"enableCopyActivityLog": true,
@@ -45,7 +46,8 @@
 							"linkedServiceName": {
 								"referenceName": "ls_datalake_sink",
 								"type": "LinkedServiceReference"
-							}
+							},
+							"path": "manualfiles"
 						}
 					}
 				},
@@ -58,11 +60,19 @@
 				"outputs": [
 					{
 						"referenceName": "ds_database_sink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"table": "airport"
+						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"file": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
