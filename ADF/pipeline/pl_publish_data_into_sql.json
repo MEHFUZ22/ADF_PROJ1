@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureDatabricksDeltaLakeSource",
+						"query": "select * from hive_metastore.mart_azure.airlines",
 						"exportSettings": {
 							"type": "AzureDatabricksDeltaLakeExportCommand"
 						}
