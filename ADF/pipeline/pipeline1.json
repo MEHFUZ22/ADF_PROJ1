@@ -30,7 +30,7 @@
 								"waitOnCompletion": true,
 								"parameters": {
 									"layer_name": {
-										"value": "@pipeline().parameters.layer_name",
+										"value": "@item().layer_name_to_run",
 										"type": "Expression"
 									}
 								}
@@ -41,9 +41,11 @@
 			}
 		],
 		"parameters": {
-			"layer_name": {
-				"type": "string",
-				"defaultValue": "Mart"
+			"layer_name_to_run": {
+				"type": "array",
+				"defaultValue": [
+					"Mart"
+				]
 			}
 		},
 		"annotations": []
