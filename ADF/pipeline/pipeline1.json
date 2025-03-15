@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.layer_name",
+						"value": "@pipeline().parameters.layer_name_to_run",
 						"type": "Expression"
 					},
 					"isSequential": true,
