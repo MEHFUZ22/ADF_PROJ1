@@ -29,7 +29,7 @@
 								},
 								"waitOnCompletion": true,
 								"parameters": {
-									"layer_name": {
+									"layer_Name": {
 										"value": "@item()",
 										"type": "Expression"
 									}
