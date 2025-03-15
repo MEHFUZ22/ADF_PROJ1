@@ -110,11 +110,7 @@
 		"parameters": {
 			"layers_name_to_run": {
 				"type": "array",
-				"defaultValue": [
-					"Cleansed",
-					"Data_Quality_Cleansed",
-					"Mart"
-				]
+				"defaultValue": "['Cleansed','Data_Quality_Cleansed','Mart']"
 			}
 		},
 		"annotations": []
