@@ -30,7 +30,7 @@
 						"referenceName": "ds_file_config_json",
 						"type": "DatasetReference",
 						"parameters": {
-							"filename": "Table_Source_SQL.json",
+							"filename": "Table_Source_Datalake.json",
 							"container": "manualfiles"
 						}
 					},
