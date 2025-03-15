@@ -18,7 +18,7 @@
 					"notebookPath": "/CODES/ADB_PROJ ONE/AZURE PROJ_1 ADB/Run_Notebooks",
 					"baseParameters": {
 						"layer_name": {
-							"value": "@pipeline().parameters.layer_name",
+							"value": "@pipeline().parameters.layer_Name",
 							"type": "Expression"
 						}
 					}
@@ -30,7 +30,7 @@
 			}
 		],
 		"parameters": {
-			"layer_name": {
+			"layer_Name": {
 				"type": "string"
 			}
 		},
