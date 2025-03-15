@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"notebookPath": "/CODES/ADB_PROJ ONE/AZURE PROJ_1 ADB/Run_Notebooks",
 					"baseParameters": {
-						"layer_name": {
+						"layer_Name": {
 							"value": "@pipeline().parameters.layer_Name",
 							"type": "Expression"
 						}
