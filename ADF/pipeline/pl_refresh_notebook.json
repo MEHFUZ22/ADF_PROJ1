@@ -29,6 +29,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"layer_name": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
