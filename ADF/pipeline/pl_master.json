@@ -97,7 +97,7 @@
 								"waitOnCompletion": true,
 								"parameters": {
 									"layer_name": {
-										"value": "@item().layers_name_to_run",
+										"value": "@item()",
 										"type": "Expression"
 									}
 								}
@@ -110,7 +110,11 @@
 		"parameters": {
 			"layers_name_to_run": {
 				"type": "array",
-				"defaultValue": "['Cleansed','Data_Quality_Cleansed','Mart']"
+				"defaultValue": [
+					"Cleansed",
+					"Data_Quality_Cleansed",
+					"Mart"
+				]
 			}
 		},
 		"annotations": []
