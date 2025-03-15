@@ -135,7 +135,6 @@
 				"type": "array",
 				"defaultValue": [
 					"Cleansed",
-					"Data_Quality_Cleansed",
 					"Mart"
 				]
 			}
