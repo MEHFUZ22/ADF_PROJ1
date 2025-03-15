@@ -30,7 +30,7 @@
 								"waitOnCompletion": true,
 								"parameters": {
 									"layer_name": {
-										"value": "@item().layer_name_to_run",
+										"value": "@item()",
 										"type": "Expression"
 									}
 								}
